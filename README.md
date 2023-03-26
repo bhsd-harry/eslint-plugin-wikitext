@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/eslint-plugin-wikitext.svg)](https://www.npmjs.com/package/eslint-plugin-wikitext)
+
 # eslint-plugin-wikitext
 
 ESLint plugin for [Wikitext](https://www.mediawiki.org/wiki/Wikitext)
