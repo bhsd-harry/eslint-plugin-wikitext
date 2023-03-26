@@ -1,6 +1,6 @@
 {
 	"name": "eslint-plugin-wikitext",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "ESLint plugin for Wikitext",
 	"keywords": [
 		"eslint",
@@ -34,7 +34,7 @@
 	},
 	"dependencies": {
 		"requireindex": "^1.2.0",
-		"eslint-parser-wikitext": "^0.0.0"
+		"eslint-parser-wikitext": "^0.0.2"
 	},
 	"peerDependencies": {
 		"eslint": ">=7"
