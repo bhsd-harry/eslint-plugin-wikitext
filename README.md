@@ -54,8 +54,9 @@ Specify the path to the parser's configuration file:
 ```jsonc
 {
 	"parserOptions": {
+		// Paths are relative to the wikiparser-node module, not the working directory
 		// e.g., configuration for Chinese Wikipedia https://zh.wikipedia.org
-		"config": "./node_modules/wikiparser-node/config/zhwiki.json"
+		"config": "./config/zhwiki"
 		// Check https://github.com/bhsd-harry/wikiparser-node/tree/main/config for other preset configurations
 	}
 }
@@ -85,7 +86,7 @@ One recommended solution is to determine this option based on the page name:
 			]
 		},
 		{
-			"files": "**/Template:*.wiki", // templates conventionally have a "Template:" prefix
+			"files": "**/Template:*.wiki", // Templates conventionally have a "Template:" prefix
 			"parserOptions": {
 				"include": true
 			}
