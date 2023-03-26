@@ -129,3 +129,20 @@ First, install and configure this plugin and the abovementioned two VS Code exte
 	]
 }
 ```
+
+### Sublime Text
+
+This plugin can be used together with [Sublime​Linter-eslint](https://packagecontrol.io/packages/SublimeLinter-eslint) and [Mediawiker](https://packagecontrol.io/packages/Mediawiker).
+
+First, install and configure this plugin and the abovementioned two Sublime Text packages respectively. Then add the settings below to the package setting of [SublimeLinter](https://packagecontrol.io/packages/SublimeLinter), which is the required dependency for SublimeLinter-eslint:
+
+```jsonc
+{
+	"linters": {
+		"eslint": {
+            // You may include other selectors for source.ts, text.html.vue, etc.
+			"selector": "text.html.mediawiki, source.js - meta.attribute-with-value"
+		}
+	}
+}
+```

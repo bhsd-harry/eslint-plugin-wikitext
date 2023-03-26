@@ -16,8 +16,7 @@
 	"license": "GPL-3.0",
 	"author": "Bhsd",
 	"files": [
-		"/lib",
-		"/docs"
+		"/lib"
 	],
 	"main": "./lib/index.js",
 	"exports": "./lib/index.js",
