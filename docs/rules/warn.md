@@ -11,7 +11,6 @@ These are suggestions reported by the upstream parser [wikiparser-node](https://
 Examples of **incorrect** code for this rule:
 
 ```wikitext
-
 {x}
 
 [J
@@ -19,13 +18,10 @@ Examples of **incorrect** code for this rule:
 a<b
 
 <i title="x>text</i>
-
 ```
 
 Examples of **correct** code for this rule:
 
 ```wikitext
-
 [J]
-
 ```

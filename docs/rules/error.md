@@ -11,7 +11,6 @@ These are problems reported by the upstream parser [wikiparser-node](https://git
 Examples of **incorrect** code for this rule:
 
 ```wikitext
-
 中文http://example.com
 
 {{T|arg=something}
@@ -41,15 +40,12 @@ Examples of **incorrect** code for this rule:
 
 {| style="" style=""
 |}
-
 ```
 
 Examples of **correct** code for this rule:
 
 ```wikitext
-
 [[a|[b]]]
 
 x<y
-
 ```

@@ -24,9 +24,13 @@ Specify the wiki file patterns, and add `plugin:wikitext/base` to the extends se
 
 ```jsonc
 {
-    "files": "**/*.wiki", // assume wiki file extension to be ".wiki"
-    "extends": [
-        "plugin:wikitext/base" // alternatives: "plugin:wikitext/recommended" or "plugin:wikitext/inherited"
+    "overrides": [
+        {
+            "files": "**/*.wiki", // assume wiki file extension to be ".wiki"
+            "extends": [
+                "plugin:wikitext/base" // alternatives: "plugin:wikitext/recommended" or "plugin:wikitext/inherited"
+            ]
+        }
     ]
 }
 ```
@@ -38,6 +42,55 @@ Then configure the rules you want to use under the rules section.
     "rules": {
         "wikitext/rule-name": 2
     }
+}
+```
+
+## Parser Options
+
+### config
+
+Specify the path to the parser's configuration file:
+
+```jsonc
+{
+    "parserOptions": {
+        // e.g., configuration for Chinese Wikipedia https://zh.wikipedia.org
+        "config": "./node_modules/wikiparser-node/config/zhwiki.json"
+        // Check https://github.com/bhsd-harry/wikiparser-node/tree/main/config for other preset configurations
+    }
+}
+```
+
+### include
+
+By default, the parser will ignore any code for inclusion only (i.e., `<includeonly></includeonly>`). You can decide to ignore any code not for inclusion (i.e., `<noinclude></noinclude>`) instead:
+
+```json
+{
+    "parserOptions": {
+        "include": true
+    }
+}
+```
+
+One recommended solution is to determine this option based on the page name:
+
+```jsonc
+{
+    "overrides": [
+        {
+            "files": "**/*.wiki", // assume wiki file extension to be ".wiki"
+            "extends": [
+                "plugin:wikitext/base" // alternatives: "plugin:wikitext/recommended" or "plugin:wikitext/inherited"
+            ]
+        },
+        {
+            "files": "**/Template:*.wiki", // templates conventionally have a "Template:" prefix
+            "parserOptions": {
+                "include": true
+            }
+        }
+    ]
 }
 ```
 
