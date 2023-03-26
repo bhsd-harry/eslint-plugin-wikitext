@@ -1,6 +1,6 @@
 # eslint-plugin-wikitext
 
-ESLint plugin for Wikitext
+ESLint plugin for [Wikitext](https://www.mediawiki.org/wiki/Wikitext)
 
 ## Installation
 
@@ -20,7 +20,7 @@ npm i eslint-plugin-wikitext --save-dev
 
 Specify the wiki file patterns, and add `plugin:wikitext/base` to the extends section of your `.eslintrc` configuration file:
 
-```json
+```jsonc
 {
     "files": "**/*.wiki", // assume wiki file extension to be ".wiki"
     "extends": [
