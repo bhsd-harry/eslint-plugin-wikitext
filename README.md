@@ -110,4 +110,22 @@ One recommended solution is to determine this option based on the page name:
 
 <!-- end auto-generated rules list -->
 
+## Advanced Usage
 
+### Visual Studio Code
+
+This plugin can be used together with the [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) and the [Wikitext extension](https://marketplace.visualstudio.com/items?itemName=RoweWilsonFrederiskHolme.wikitext).
+
+First, install and configure this plugin and the abovementioned two VS Code extensions respectively. Then add the settings below to `.vscode/settings.json`:
+
+```json
+{
+	"eslint.runtime": "node",
+	"eslint.probe": [
+		"wikitext"
+	],
+	"eslint.validate": [
+		"wikitext"
+	]
+}
+```
