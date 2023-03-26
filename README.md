@@ -28,7 +28,8 @@ Specify the wiki file patterns, and add `plugin:wikitext/base` to the extends se
 		{
 			"files": "**/*.wiki", // assume wiki file extension to be ".wiki"
 			"extends": [
-				"plugin:wikitext/base" // alternatives: "plugin:wikitext/recommended" or "plugin:wikitext/inherited"
+				"plugin:wikitext/base"
+				// alternatives: "plugin:wikitext/recommended" or "plugin:wikitext/inherited"
 			]
 		}
 	]
@@ -57,7 +58,8 @@ Specify the path to the parser's configuration file:
 		// Paths are relative to the wikiparser-node module, not the working directory
 		// e.g., configuration for Chinese Wikipedia https://zh.wikipedia.org
 		"config": "./config/zhwiki"
-		// Check https://github.com/bhsd-harry/wikiparser-node/tree/main/config for other preset configurations
+		// Check https://github.com/bhsd-harry/wikiparser-node/tree/main/config for other
+		// preset configurations
 	}
 }
 ```
@@ -82,11 +84,13 @@ One recommended solution is to determine this option based on the page name:
 		{
 			"files": "**/*.wiki", // assume wiki file extension to be ".wiki"
 			"extends": [
-				"plugin:wikitext/base" // alternatives: "plugin:wikitext/recommended" or "plugin:wikitext/inherited"
+				"plugin:wikitext/base"
+				// alternatives: "plugin:wikitext/recommended" or "plugin:wikitext/inherited"
 			]
 		},
 		{
-			"files": "**/Template:*.wiki", // Templates conventionally have a "Template:" prefix
+			// Templates conventionally have a "Template:" prefix
+			"files": "**/Template:*.wiki",
 			"parserOptions": {
 				"include": true
 			}
