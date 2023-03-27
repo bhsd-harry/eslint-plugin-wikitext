@@ -33,7 +33,7 @@
 	},
 	"dependencies": {
 		"requireindex": "^1.2.0",
-		"eslint-parser-wikitext": "^0.0.2"
+		"eslint-parser-wikitext": "^0.0.3"
 	},
 	"peerDependencies": {
 		"eslint": ">=7"
