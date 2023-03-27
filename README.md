@@ -2,7 +2,7 @@
 
 # eslint-plugin-wikitext
 
-ESLint plugin for [Wikitext](https://www.mediawiki.org/wiki/Wikitext) built upon a Node.js [parser](https://github.com/bhsd-harry/wikiparser-node/tree/mini)
+ESLint plugin for [Wikitext](https://www.mediawiki.org/wiki/Wikitext) built upon a Node.js [parser](https://github.com/bhsd-harry/wikiparser-node/tree/lint)
 
 ## Installation
 
