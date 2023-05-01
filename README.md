@@ -20,29 +20,29 @@ npm i eslint-plugin-wikitext --save-dev
 
 ## Usage
 
-Specify the wiki file patterns, and add `plugin:wikitext/base` to the extends section of your `.eslintrc` configuration file:
+Specify the wiki file patterns, and add `plugin:wikitext/base` to the `extends` section of your `.eslintrc.js` configuration file:
 
-```jsonc
-{
-	"overrides": [
+```js
+module.exports = {
+	overrides: [
 		{
-			"files": "**/*.wiki", // assume wiki file extension to be ".wiki"
-			"extends": [
-				"plugin:wikitext/base"
+			files: "**/*.wiki", // assume wiki file extension to be ".wiki"
+			extends: [
+				"plugin:wikitext/base",
 				// alternatives: "plugin:wikitext/recommended" or "plugin:wikitext/inherited"
-			]
-		}
-	]
-}
+			],
+		},
+	],
+};
 ```
 
-Then configure the rules you want to use under the rules section.
+Then configure the rules you want to use under the `rules` section.
 
-```json
+```js
 {
-	"rules": {
-		"wikitext/rule-name": 2
-	}
+	rules: {
+		"wikitext/rule-name": 2,
+	},
 }
 ```
 
@@ -50,17 +50,26 @@ Then configure the rules you want to use under the rules section.
 
 ### config
 
-Specify the path to the parser's configuration file:
+Specify a preset configuration file:
 
-```jsonc
+```js
 {
-	"parserOptions": {
-		// Paths are relative to the wikiparser-node module, not the working directory
+	parserOptions: {
 		// e.g., configuration for Chinese Wikipedia https://zh.wikipedia.org
-		"config": "./config/zhwiki"
+		config: "zhwiki",
 		// Check https://github.com/bhsd-harry/wikiparser-node/tree/main/config for other
 		// preset configurations
-	}
+	},
+}
+```
+
+Or you can create your own configuration based on the [schema](https://github.com/bhsd-harry/wikiparser-node/tree/main/config/.schema.json):
+
+```js
+{
+	parserOptions: {
+		config: require(PATH_TO_MY_CONFIG),
+	},
 }
 ```
 
@@ -68,35 +77,35 @@ Specify the path to the parser's configuration file:
 
 By default, the parser will ignore any code for inclusion only (i.e., `<includeonly></includeonly>`). You can decide to ignore any code not for inclusion (i.e., `<noinclude></noinclude>`) instead:
 
-```json
+```js
 {
-	"parserOptions": {
-		"include": true
-	}
+	parserOptions: {
+		include: true,
+	},
 }
 ```
 
 One recommended solution is to determine this option based on the page name:
 
-```jsonc
-{
-	"overrides": [
+```js
+module.exports = {
+	overrides: [
 		{
-			"files": "**/*.wiki", // assume wiki file extension to be ".wiki"
-			"extends": [
-				"plugin:wikitext/base"
+			files: "**/*.wiki", // assume wiki file extension to be ".wiki"
+			extends: [
+				"plugin:wikitext/base",
 				// alternatives: "plugin:wikitext/recommended" or "plugin:wikitext/inherited"
-			]
+			],
 		},
 		{
 			// Templates conventionally have a "Template:" prefix
-			"files": "**/Template:*.wiki",
-			"parserOptions": {
-				"include": true
-			}
-		}
-	]
-}
+			files: "**/Template:*.wiki",
+			parserOptions: {
+				include: true,
+			},
+		},
+	],
+};
 ```
 
 ## Rules
