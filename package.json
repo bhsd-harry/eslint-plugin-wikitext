@@ -16,7 +16,8 @@
 	"license": "GPL-3.0",
 	"author": "Bhsd",
 	"files": [
-		"/lib"
+		"/lib/index.js",
+		"lib/rules"
 	],
 	"exports": "./lib/index.js",
 	"repository": {
@@ -29,7 +30,7 @@
 		"lint:doc": "npm-run-all \"doc -- --check\"",
 		"lint:ts": "tsc --noEmit && eslint .",
 		"test": "mocha lib/tests --recursive",
-		"doc": "eslint-doc-generator --config-emoji='inherited,🌐'"
+		"doc": "eslint-doc-generator --init-rule-docs --config-emoji='inherited,🌐'"
 	},
 	"dependencies": {
 		"requireindex": "^1.2.0",

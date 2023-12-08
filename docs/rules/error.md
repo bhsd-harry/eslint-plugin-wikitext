@@ -1,7 +1,5 @@
 # Errors reported by the parser (`wikitext/error`)
 
-💼 This rule is enabled in the following configs: 🌐 `inherited`, ✅ `recommended`.
-
 <!-- end auto-generated rule header -->
 
 These are problems reported by the upstream parser [wikiparser-node](https://github.com/bhsd-harry/wikiparser-node).

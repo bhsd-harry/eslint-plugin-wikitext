@@ -113,14 +113,14 @@ module.exports = {
 <!-- begin auto-generated rules list -->
 
 💼 Configurations enabled in.\
-⚠️ Configurations set to warn in.\
 🌐 Set in the `inherited` configuration.\
 ✅ Set in the `recommended` configuration.
 
-| Name                         | Description                     | 💼   | ⚠️ |
-| :--------------------------- | :------------------------------ | :--- | :- |
-| [error](docs/rules/error.md) | errors reported by the parser   | 🌐 ✅ |    |
-| [warn](docs/rules/warn.md)   | warnings reported by the parser |      | 🌐 |
+| Name                                     | Description                                 | 💼   |
+| :--------------------------------------- | :------------------------------------------ | :--- |
+| [error](docs/rules/error.md)             | errors reported by the parser               |      |
+| [lonely-http](docs/rules/lonely-http.md) | `http` or `https` unused as a link protocol | 🌐 ✅ |
+| [warn](docs/rules/warn.md)               | warnings reported by the parser             |      |
 
 <!-- end auto-generated rules list -->
 

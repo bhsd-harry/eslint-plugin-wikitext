@@ -18,15 +18,14 @@ module.exports = {
 			plugins: ['wikitext'],
 			parser: 'eslint-parser-wikitext',
 			rules: {
-				'wikitext/error': 2,
+				'wikitext/lonely-http': 2,
 			},
 		},
 		inherited: {
 			plugins: ['wikitext'],
 			parser: 'eslint-parser-wikitext',
 			rules: {
-				'wikitext/error': 2,
-				'wikitext/warn': 1,
+				'wikitext/lonely-http': 2,
 			},
 		},
 	},
