@@ -2,18 +2,9 @@
  * @fileoverview ESLint plugin for Wikitext
  * @author Bhsd
  */
-'use strict';
 
-// ------------------------------------------------------------------------------
-// Requirements
-// ------------------------------------------------------------------------------
-
-const requireIndex = require('requireindex'),
-	path = require('path');
-
-// ------------------------------------------------------------------------------
-// Plugin Definition
-// ------------------------------------------------------------------------------
+import requireIndex = require('requireindex');
+import * as path from 'path';
 
 // import all rules in lib/rules
 module.exports = {

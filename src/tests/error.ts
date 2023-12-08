@@ -2,21 +2,14 @@
  * @fileoverview errors reported by the parser
  * @author Bhsd
  */
-'use strict';
 
-// ------------------------------------------------------------------------------
-// Requirements
-// ------------------------------------------------------------------------------
+import * as rule from '../rules/error';
+import {RuleTester} from 'eslint';
+import type {Rule} from 'eslint';
 
-const rule = require('../../../lib/rules/error'),
-	{RuleTester} = require('eslint');
+const parser = require.resolve('eslint-parser-wikitext');
 
-// ------------------------------------------------------------------------------
-// Tests
-// ------------------------------------------------------------------------------
-
-const ruleTester = new RuleTester({parser: require.resolve('eslint-parser-wikitext')});
-ruleTester.run('error', rule, {
+new RuleTester({parser}).run('error', rule as Rule.RuleModule, {
 	valid: [
 		{code: '[[a|[b]]]'},
 		{code: 'x<y'},
@@ -96,11 +89,7 @@ ruleTester.run('error', rule, {
 	],
 });
 
-const ruleTesterInclude = new RuleTester({
-	parser: require.resolve('eslint-parser-wikitext'),
-	parserOptions: {include: true},
-});
-ruleTesterInclude.run('error', rule, {
+new RuleTester({parser, parserOptions: {include: true}}).run('error', rule as Rule.RuleModule, {
 	valid: [{code: '{{{a}}}'}],
 	invalid: [
 		{
