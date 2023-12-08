@@ -105,7 +105,7 @@ ruleTesterInclude.run('error', rule, {
 	invalid: [
 		{
 			code: '{{{a|b|}}}',
-			errors: [{message: 'invisible content inside triple brackets'}],
+			errors: [{message: 'invisible content inside triple braces'}],
 		},
 	],
 });

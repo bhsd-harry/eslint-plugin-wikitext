@@ -22,9 +22,7 @@
 		"no-constant-binary-expression": 2,
 		"no-constructor-return": 2,
 		"no-control-regex": 0,
-		"no-empty-character-class": 0,
 		"no-fallthrough": 2,
-		"no-import-assign": 0,
 		"no-inner-declarations": [
 			2,
 			"both"
@@ -247,8 +245,7 @@
 			{
 				"VariableDeclarator": {
 					"array": true,
-					"object": true,
-					"enforceForRenamedProperties": "literal"
+					"object": true
 				},
 				"AssignmentExpression": {
 					"array": true,
@@ -321,7 +318,7 @@
 		],
 		"function-paren-newline": [
 			2,
-			"consistent"
+			"multiline-arguments"
 		],
 		"indent": [
 			2,
@@ -358,7 +355,13 @@
 				"ignoreChainWithDepth": 4
 			}
 		],
-		"no-extra-parens": 2,
+		"no-extra-parens": [
+			2,
+			"all",
+			{
+				"allowParensAfterCommentPattern": "@type"
+			}
+		],
 		"no-multi-spaces": [
 			2,
 			{
@@ -377,6 +380,7 @@
 		"object-curly-newline": [
 			2,
 			{
+				"multiline": true,
 				"consistent": true
 			}
 		],
@@ -424,20 +428,15 @@
 			2,
 			"inside"
 		],
-		"n/no-extraneous-import": 0,
-		"n/no-missing-import": 0,
-		"n/no-new-require": 2,
-		"n/no-path-concat": 2,
-		"n/no-unpublished-bin": 0,
-		"n/no-unpublished-import": 0,
-		"n/no-unpublished-require": 0,
-		"n/shebang": 0,
 		"n/exports-style": [
 			2,
 			"module.exports"
 		],
+		"n/no-missing-import": 0,
 		"n/no-missing-require": 2,
 		"n/no-mixed-requires": 2,
+		"n/no-new-require": 2,
+		"n/no-path-concat": 2,
 		"eslint-comments/disable-enable-pair": [
 			2,
 			{
@@ -453,51 +452,6 @@
 			],
 			"env": {
 				"mocha": true
-			}
-		},
-		{
-			"files": "**/*.json",
-			"parser": "eslint-plugin-json-es",
-			"extends": [
-				"plugin:eslint-plugin-json-es/recommended"
-			],
-			"rules": {
-				"array-bracket-newline": [
-					2,
-					{
-						"minItems": 1
-					}
-				],
-				"array-element-newline": [
-					2,
-					"always"
-				],
-				"comma-dangle": [
-					2,
-					"never"
-				],
-				"no-multiple-empty-lines": [
-					2,
-					{
-						"max": 0
-					}
-				],
-				"object-curly-newline": [
-					2,
-					{
-						"minProperties": 1
-					}
-				],
-				"object-property-newline": [
-					2,
-					{
-						"allowAllPropertiesOnSameLine": false
-					}
-				],
-				"strict": [
-					2,
-					"never"
-				]
 			}
 		}
 	]

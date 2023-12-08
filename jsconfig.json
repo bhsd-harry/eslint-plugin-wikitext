@@ -1,8 +1,7 @@
 {
 	"compilerOptions": {
 		"target": "esnext",
-		"module": "commonJS",
-		"moduleResolution": "node"
+		"module": "CommonJS"
 	},
 	"typeAcquisition": {
 		"include": [
