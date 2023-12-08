@@ -23,10 +23,10 @@ module.exports = {
 		schema: [],
 	},
 	create(context) {
-		const {parserServices: {errors}}: {parserServices: {errors: LintError[]}} = context;
+		const {sourceCode: {parserServices: {errors}}} = context;
 		return {
 			Program(): void {
-				for (const {severity, message, startLine, startCol, endLine, endCol} of errors) {
+				for (const {severity, message, startLine, startCol, endLine, endCol} of errors as LintError[]) {
 					if (severity === 'error') {
 						context.report({
 							message,

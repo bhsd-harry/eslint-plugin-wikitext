@@ -1,8 +1,3 @@
-/**
- * @fileoverview warnings reported by the parser
- * @author Bhsd
- */
-
 import * as rule from '../rules/warn';
 import {RuleTester} from 'eslint';
 import type {Rule} from 'eslint';
