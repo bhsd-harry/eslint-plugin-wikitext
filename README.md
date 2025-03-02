@@ -118,9 +118,7 @@ module.exports = {
 
 | Name                                     | Description                                 | 💼   |
 | :--------------------------------------- | :------------------------------------------ | :--- |
-| [error](docs/rules/error.md)             | errors reported by the parser               |      |
 | [lonely-http](docs/rules/lonely-http.md) | `http` or `https` unused as a link protocol | 🌐 ✅ |
-| [warn](docs/rules/warn.md)               | warnings reported by the parser             |      |
 
 <!-- end auto-generated rules list -->
 

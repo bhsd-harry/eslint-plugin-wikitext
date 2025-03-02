@@ -1,5 +1,5 @@
 /**
- * @fileoverview `http` or `https` unused as a link protocol
+ * @file `http` or `https` unused as a link protocol
  * @author Bhsd
  */
 

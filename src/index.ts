@@ -1,10 +1,10 @@
 /**
- * @fileoverview ESLint plugin for Wikitext
+ * @file ESLint plugin for Wikitext
  * @author Bhsd
  */
 
-import requireIndex = require('requireindex');
 import * as path from 'path';
+import requireIndex = require('requireindex'); // eslint-disable-line @typescript-eslint/no-require-imports
 
 // import all rules in lib/rules
 module.exports = {
